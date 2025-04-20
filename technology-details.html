@@ -1,0 +1,110 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriTech - New Technologies</title>
+    <link rel="stylesheet" href="css/technology-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <section class="technology-section">
+        <div class="container">
+            <div class="section-header">
+                <p>Checkout <span>the</span> New Technologies</p>
+                <h2>New Technologies</h2>
+            </div>
+            
+            <div class="technology-cards">
+                <!-- Technology Card 1 -->
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="https://via.placeholder.com/400x300?text=Vertical+Farming" alt="Vertical Farming">
+                    </div>
+                    <div class="tech-content">
+                        <h3>Vertical Farming</h3>
+                        <p class="short-desc">A "window garden" is how it's being referred to here. Small plant crops and vine crops see the most vertical farming utilization...</p>
+                        <p class="full-desc" style="display: none;">In India, the anna data are the farmers. They put up long hours to ensure everyone has enough to eat. The farmers organized themselves by the size of their farms. Listed below are the many categories of Indian farmers. Consider looking at the Farmer profile. The Agriculture Blower is a vital component of feed mills and blenders.</p>
+                        <button class="view-more-btn">View More <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Technology Card 2 -->
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="https://via.placeholder.com/400x300?text=Precision+Farming" alt="Precision Farming">
+                    </div>
+                    <div class="tech-content">
+                        <h3>Precision Farming</h3>
+                        <p class="short-desc">Precision farming, also known as site-specific crop management, uses technology and data to optimize resource use...</p>
+                        <p class="full-desc" style="display: none;">Precision agriculture (PA) is a management strategy that gathers, processes and analyzes temporal, spatial and individual plant and animal data and combines it with other information to support management decisions according to estimated variability for improved resource use efficiency, productivity, quality, profitability and sustainability of agricultural production.</p>
+                        <button class="view-more-btn">View More <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+                
+                <!-- Technology Card 3 -->
+                <div class="tech-card">
+                    <div class="tech-image">
+                        <img src="https://via.placeholder.com/400x300?text=Hydroponic+Farming" alt="Hydroponic Farming">
+                    </div>
+                    <div class="tech-content">
+                        <h3>Hydroponic Farming</h3>
+                        <p class="short-desc">Hydroponic farming, or soilless farming, involves growing plants in a nutrient-rich water solution...</p>
+                        <p class="full-desc" style="display: none;">Hydroponics or hydroponic farming is the technique of cultivating plants in a nutrient medium solution of water without the presence of soil. Yes, it may sound surprising but scientists have successfully developed a method of cultivating various local crops without soil. The word hydroponics has been taken from two root words, "hydros" meaning water and "ponos" meaning working water.</p>
+                        <button class="view-more-btn">View More <i class="fas fa-chevron-down"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Get the query parameter from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const techId = urlParams.get('id');
+
+    // Map technology IDs to content
+    const technologies = {
+        'vertical-farming': {
+            title: 'Vertical Farming',
+            description: 'Vertical farming involves growing crops in vertically stacked layers...',
+            image: 'https://via.placeholder.com/400x300?text=Vertical+Farming'
+        },
+        'precision-farming': {
+            title: 'Precision Farming',
+            description: 'Precision farming uses technology and data to optimize resource use...',
+            image: 'https://via.placeholder.com/400x300?text=Precision+Farming'
+        },
+        'hydroponic': {
+            title: 'Hydroponic Farming',
+            description: 'Hydroponic farming involves growing plants in a nutrient-rich water solution...',
+            image: 'https://via.placeholder.com/400x300?text=Hydroponic+Farming'
+        }
+    };
+
+    // Get the content container
+    const contentContainer = document.querySelector('.technology-section .container');
+
+    // Display the relevant content
+    if (techId && technologies[techId]) {
+        const tech = technologies[techId];
+        contentContainer.innerHTML = `
+            <div class="section-header">
+                <p>Learn More About</p>
+                <h2>${tech.title}</h2>
+            </div>
+            <div class="tech-details">
+                <img src="${tech.image}" alt="${tech.title}">
+                <p>${tech.description}</p>
+            </div>
+        `;
+    } else {
+        contentContainer.innerHTML = '<p>Technology not found.</p>';
+    }
+});
+    </script>
+</body>
+</html>

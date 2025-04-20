@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../loginpage/styles.css">
+  <title>Registration Web</title>
+</head>
+
+<body>
+  <section>
+    <div class="form-box-register">
+      <div class="form-value">
+        <form action="">
+          <h2>New Registration</h2>
+          <div class="inputbox">
+            <input type="name" required>
+            <label for="">Username</label>
+          </div>
+          <div class="inputbox">
+            <input type="password" required>
+            <label for="">Password</label>
+          </div>
+          <div class="inputbox">
+            <input type="email" required>
+            <label for="">email</label>
+          </div>
+
+          <button>Register</button>
+

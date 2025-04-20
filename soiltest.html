@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Test | Know Your Soil, Grow Better Crops!</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌱 Know Your Soil, Grow Better Crops!</h1>
+            <p>Test your soil health and get personalized recommendations.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="soil-test-form">
+            <h2>Soil Test Analysis</h2>
+            <form id="soilTestForm">
+                <div class="form-group">
+                    <label for="soil-type">Soil Type:</label>
+                    <select id="soil-type" required>
+                        <option value="">Select Soil Type</option>
+                        <option value="clay">Clay</option>
+                        <option value="loam">Loam</option>
+                        <option value="sandy">Sandy</option>
+                        <option value="silt">Silt</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ph-level">pH Level:</label>
+                    <input type="number" id="ph-level" min="0" max="14" step="0.1" placeholder="e.g., 6.5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nitrogen">Nitrogen (N) ppm:</label>
+                    <input type="number" id="nitrogen" min="0" placeholder="e.g., 20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phosphorus">Phosphorus (P) ppm:</label>
+                    <input type="number" id="phosphorus" min="0" placeholder="e.g., 15" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="potassium">Potassium (K) ppm:</label>
+                    <input type="number" id="potassium" min="0" placeholder="e.g., 25" required>
+                </div>
+
+                <button type="submit" class="btn">Analyze Soil</button>
+            </form>
+        </section>
+
+        <section class="results" id="results" style="display: none;">
+            <h2>Your Soil Test Results</h2>
+            <div class="result-card">
+                <p><strong>Soil Type:</strong> <span id="result-soil-type"></span></p>
+                <p><strong>pH Level:</strong> <span id="result-ph"></span></p>
+                <p><strong>Nitrogen (N):</strong> <span id="result-nitrogen"></span></p>
+                <p><strong>Phosphorus (P):</strong> <span id="result-phosphorus"></span></p>
+                <p><strong>Potassium (K):</strong> <span id="result-potassium"></span></p>
+                <div class="recommendations" id="recommendations"></div>
+            </div>
+            <button class="btn" id="retry-btn">Test Another Sample</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Soil Test | Grow Smarter, Harvest Better</p>
+        </div>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

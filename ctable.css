@@ -1,0 +1,73 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1569012871812-f38ee64b4ed8'); /* Farming landscape */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+    color: #3A5311;
+    text-align: center;
+}
+
+h2 {
+    color: #4CAF50;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 85%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #F3EACF;
+    border-radius: 12px;
+    box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+th, td {
+    border: 2px solid #8B4513;
+    padding: 14px;
+    text-align: center;
+    font-size: 18px;
+}
+
+th {
+    background-color: #6B8E23;
+    color: white;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #E0D8B0;
+}
+
+tr:hover {
+    background-color: #C1A57B;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.02);
+}
+
+.no-data {
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #6B8E23;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    background-color: #4CAF50;
+    margin-top: 15px;
+    padding: 10px 20px;
+
+}
